@@ -2,7 +2,7 @@
 setInterval(function() 
 {  
 	//this will get current runnig video url 
-	var last_download_url;
+	var last_download_url='';
 	url = document.querySelectorAll('video')[0].getAttribute("src");
 	if(url==last_download_url)
 	{
