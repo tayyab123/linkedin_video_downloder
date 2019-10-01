@@ -2,9 +2,18 @@
 setInterval(function() 
 {  
 	//this will get current runnig video url 
-   url = document.querySelectorAll('video')[0].getAttribute("src");
-   //this function open video url in new tab you can download by right click save as video 
-   downloadFile(url); // UNCOMMENT THIS LINE TO MAKE IT WORK
+	var last_download_url;
+	url = document.querySelectorAll('video')[0].getAttribute("src");
+	if(url==last_download_url)
+	{
+   
+	}
+	else
+	{
+	 last_download_url=url;
+	 //this function open video url in new tab you can download by right click save as video 
+	 downloadFile(url); // UNCOMMENT THIS LINE TO MAKE IT WORK
+    }
   
 }, 3000);
 //,main end here
